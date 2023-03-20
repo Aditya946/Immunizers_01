@@ -1,0 +1,106 @@
+/* Set default styles for the page */
+body {
+    background: url(Healthcare1.jpg);
+  }
+
+  .heading{
+    /* flex-wrap: wrap; */
+    border-radius: 8px;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  
+  /* Style the header section */
+  header {
+    background-color: #68b5d1;
+    color: #fff;
+    padding: 20px;
+    background: url(Healthcare1.jpg);
+  }
+
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+    
+  h3{
+    margin: 1px;
+    color: rebeccapurple;
+  }
+  
+  /* Style the logo */
+  h1 {
+    margin: 0;
+    font-size: 28px;
+  }
+  
+  /* Style the navigation menu */
+  nav {
+    display: inline-block;
+  }
+  
+  nav a {
+    color: #181414;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Style the main content section */
+  main {
+    padding: 20px;
+  }
+  
+  /* Style the headings */
+  h2, h3 {
+    font-size: 24px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  /* Style the paragraphs */
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Style the unordered list */
+  ul {
+    margin-top: 0;
+    margin-bottom: 20px;
+    list-style-type: none;
+    padding-left: 0;
+  }
+  
+  /* Style the list items */
+  li {
+    margin-bottom: 10px;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* Style the copyright text */
+  footer p {
+    margin: 0;
+  }
+  
+  div {
+    width: 300px;
+    border: 15px solid rgb(123, 202, 214);
+    padding: 50px;
+    margin: 20px;
+  }

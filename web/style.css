@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css?family=Georgia, serif');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Georgia, serif'; */
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('Healthcare1.jpg') no-repeat;
+    background-size: cover;
+    margin-top: 50px;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height : 50px;
+    padding: 20px 50px;
+    background: rgb(17, 80, 117);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.logo {
+    font-size: 1.5 rem;
+    color: #fff;
+    user-select: none;
+}
+
+.navigation a {
+    position: relative;
+    font-size: 1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+}
+
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -5px;
+    width: 60px;
+    height: 1px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+}
+
+.navigation a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+}
+
+.navigation .btnLogin-popup {
+    width: 70px;
+    height: 30px;
+    background: fixed;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    border-width: 1px;
+    cursor: pointer;
+    font-size: 1rem;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: 0.5s;
+}
+
+.navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #111827;
+
+}
+
+.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; 
+    transform: scale(0);
+    transition: transform .5s ease, height .2s ease;
+}
+
+.wrapper.active-popup{
+    transform: scale(1) ;
+}
+.wrapper.active {
+    height: 520px;
+}
+.wrapper .form-box {
+    width: 100%;
+    padding: 40px;
+}
+
+.wrapper .form-box.login {
+    transition: transform .18s ease;
+    transform: translateX(0);
+    /* display: none;*/
+}
+
+.wrapper.active .form-box.login {
+    transition: none;
+    transform: translateX(-400px);
+}
+
+.wrapper .form-box.register {
+    position: absolute;
+    transition: none;
+    transform: translateX(400px);
+    width: 400px;
+    height: 900px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.wrapper.active .form-box.register {
+    position: absolute;
+    transition: transform .18s ease;
+    transform: translateX(0);
+    width: 400px;
+    height: 800px;
+    margin-top: 280px;
+    margin-bottom: 100px;
+
+}
+
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: rgb(17, 80, 117);
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.form-box h2 {
+    font-size: 2em;
+    color:  rgb(17, 80, 117);
+    text-align: center;
+}
+
+.input-box {
+    position: relative;
+    width: 100%;
+    height: 35px;
+    border-bottom: 2px solid  rgb(17, 80, 117);
+    margin: 30px 0;
+}
+
+.input-box label {
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color:  rgb(17, 80, 117);
+    font-weight: 500;
+    pointer-events: none;
+    transition: 0.5s;
+}
+
+.input-box input:focus~label,
+.input-box input:focus~label {
+    top: -5px;
+}
+
+.input-box input {
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color:  rgb(17, 80, 117);
+    font-weight: 500;
+    padding: 0 35 0 5px;
+}
+
+.input-box .icon {
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color:  rgb(17, 80, 117);
+    line-height: 50px;
+}
+
+.remember-forgot {
+    font-size: .9em;
+    color:  rgb(17, 80, 117);
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.remember-forgot label input {
+    accent-color:  rgb(17, 80, 117);
+    margin-right: 3px;
+}
+
+.remember-forgot a {
+   color:  rgb(17, 80, 117);
+   text-decoration: none; 
+}
+
+.remember-forgot a:hover {
+    text-decoration: underline;
+}
+
+.btn {
+    width: 100%;
+    height: 45px;
+    background:  rgb(17, 80, 117);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #fff;
+    font-weight: 500;
+}
+
+.login-register {
+    font-size: .9em;
+    color:  rgb(17, 80, 117);
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+
+.login-register p a {
+    color:  rgb(17, 80, 117);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-register p a:hover {
+    text-decoration: underline;
+}
+
+/* For Desktop View */
+@media screen and (min-width: 1024px) {
+    .gfg-div {
+      background-color: #63c971;
+      color: #fff;
+    }
+  }
+   
+  /* For Tablet View */
+  @media screen and (min-device-width: 768px)
+  and (max-device-width: 1024px) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: orange;
+      color: black;
+    }
+  }
+   
+  /* For Mobile Portrait View */
+   @media screen and (max-device-width: 480px)
+  and (orientation: portrait) {
+    .gfg-div {
+      width: 200px;
+      height: 200px;
+      background-color: red;
+      color: #fff;
+    }
+  } 
+   
+  /* For Mobile Landscape View */
+  @media screen and (max-device-width: 640px)
+  and (orientation: landscape) {
+    .gfg-div {
+      width: 400px;
+      height: 200px;
+      background-color: cyan;
+      color: black;
+    }
+  
+  }
+   
+  /* For Mobile Phones Portrait or Landscape View */
+   @media screen and (max-device-width: 640px) {
+    .gfg-div {
+      width: 400px;
+      height: 200px;
+      background-color: chartreuse;
+      color: black;
+    }
+  } 
+   
+  /* For iPhone 4 Portrait or Landscape View */
+  @media screen and (min-device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: brown;
+      color: black;
+    }
+  } 
+   
+  /* For iPhone 5 Portrait or Landscape View */
+  @media (device-height: 568px) and (device-width: 320px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: cornflowerblue;
+      color: black;
+    }
+  } 
+   
+  /* For iPhone 6 and 6 plus Portrait or Landscape View */
+  @media (min-device-height: 667px) and (min-device-width: 375px)
+  and (-webkit-min-device-pixel-ratio: 3) {
+    .gfg-div {
+      width: 400px;
+      height: 400px;
+      background-color: darkgoldenrod;
+      color: black;
+    }
+  }

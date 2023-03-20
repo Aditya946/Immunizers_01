@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title> <h2> Vaccination Statistics</h2>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.2.1/chart.min.js" integrity="sha512-v3ygConQmvH0QehvQa6gSvTE2VdBZ6wkLOlmK7Mcy2mZ0ZF9saNbbk19QeaoTHdWIEiTlWmrwAL4hS8ElnGFbA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    </title>
+    <script> 
+          function goBack(){
+              window.history.back();
+       }
+          </script>
+    <style>.graph-container {
+        text-align: center; /* Center the container */
+      }
+     
+</style>
+</head> 
+<body>
+    <nav> <button  onclick="goBack()">Home </button></nav>
+    <h1 align="center"> Vaccination Statistice</h1>
+    
+    
+    <div class="graph-container">
+    
+        <canvas id="myChart" height="100" weight="30"> </canvas>
+      </div>
+      
+      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+      
+      <script>
+        const ctx = document.getElementById('myChart');
+      
+        new Chart(ctx, {
+          type: 'bar',
+          data: {
+            labels: ['Hepatities', 'BCG', 'Polio', 'Green', 'Rotavirus', 'FIPV'],
+            datasets: [{
+              label: 'Dosages',
+              data: [12, 19, 3, 5, 2, 3],
+              borderWidth: 1
+            }]
+          },
+          options: {
+            scales: {
+              y: {
+                beginAtZero: true
+              }
+            }
+          }
+        });
+      </script>
+      <h4 align="center"> Vaccination target achieved by the number of dosage</h4>
+      <script> 
+          function goBack(){
+              window.history.back();
+       }
+          </script>
+         
+</body>
+</html>
